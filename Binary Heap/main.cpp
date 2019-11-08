@@ -28,7 +28,7 @@ int main() {
     /* for deleteHeap2() and deleteAll(): NOTE WHAT HAPPENS HERE!!*/
     string arr2[] = {"j","c","e","d","a","k","g","b","f","h","i"};
     BinHeap *h2 = new BinHeap(arr2, 11);
-    h2->deleteAll;
+    h2->deleteAll();
     cout <<"\nAfter: (Notice what happened here!!!!!)";
     h2->printHeap();
     cout << "**********************************"<<endl;
@@ -38,7 +38,7 @@ int main() {
 
     h3->deleteAll();
 
-    cout <<"\nAfter: deleteAll()"
+    cout <<"\nAfter: deleteAll()";
     h3->printHeap();
     cout << "What does the above word mean?"<< endl;
     cout << "**********************************"<<endl;

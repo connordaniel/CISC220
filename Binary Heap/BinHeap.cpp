@@ -44,26 +44,26 @@ int BinHeap::findMax(int x, int y) {
 
 void BinHeap::bubbleDown(int i) {
     int curr = i;
-    int temp = 0;
-    while (((heap[2 * curr + 1].compare(heap[curr]) < 0) && (heap[2 * curr + 2].compare(heap[curr]) < 0 ) || (heap[curr + 1].compare(NULL) == 0) {
-        if (heap[curr] < findMax(2 * curr + 1], 2 * curr + 2)) {
+    string temp = "";
+    int find = 0;
+    while (((heap[2 * curr + 1].compare(heap[curr]) < 0) && (heap[2 * curr + 2].compare(heap[curr]) < 0 ) || (heap[curr + 1].compare(NULL) == 0))) {
+        if (heap[curr].compare(heap[findMax(2 * curr + 1, 2 * curr + 2)]) < 0 ) {
         int max = findMax(2 * curr + 1,2 * curr + 2);
         temp = heap[curr];
         heap[curr] =  max;
-        curr = indexOf(max);
-        heap[indexOf(max)] = temp;
+        curr = max;
+        heap[max] = temp;
         }
     }
 }
 
 void BinHeap::bubbleUp(int i) {
     int curr = i;
-    int temp = 0;
+    string temp = 0;
     while (curr != 0 || heap[(curr - 1) / 2] > heap[curr]) {
         temp = heap[curr];
-        heap[curr] = heap[]
-        curr = curr - 1 / 2;
-
+        heap[curr] = heap[(curr - 1) / 2];
+        curr = (curr - 1) / 2;
     }
 }
 
@@ -85,7 +85,7 @@ string BinHeap::deleteHeap() {
     for (int i = 0; i < heaplen;i++) {
         if (heap[i].compare(NULL) == 0) {
             heap[0] = heap[i - 1];
-            heap[i - 1] = NULL;
+            heap[i - 1].clear();
             break;
         }
     }
@@ -102,7 +102,7 @@ string BinHeap::deleteHeap2() {
     for (int i = 0; i < heaplen;i++) {
         if (heap[i].compare(NULL) == 0) {
             heap[0] = heap[i - 1];
-            heap[i - 1] = NULL;
+            heap[i - 1].clear();
             break;
         }
     }

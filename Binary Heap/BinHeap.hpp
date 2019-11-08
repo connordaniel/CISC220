@@ -16,9 +16,9 @@ class BinHeap {
         void bubbleDown(int i);
         void bubbleUp(int i);
         void insertHeap(string s);
-        void deleteHeap();
+        string deleteHeap();
         string deleteHeap2();
         void deleteAll();
 };
 
-#endif /* BINHEAP_HPP_ */s:
+#endif /* BINHEAP_HPP_ */
